@@ -13,8 +13,8 @@ class NavigationViewController: UINavigationController {
     override func viewDidLoad() {
 //        navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btn_back")
 //        navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "btn_back")
-//        let offset = UIOffset.init(horizontal: CGFloat(FLT_MAX), vertical: CGFloat(FLT_MAX))
-//        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(offset, for: .default)
+        let offset = UIOffset.init(horizontal: CGFloat(FLT_MAX), vertical: CGFloat(FLT_MAX))
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(offset, for: .default)
         navigationBar.setBackgroundImage(#imageLiteral(resourceName: "naviga"), for: .default)
     }
     

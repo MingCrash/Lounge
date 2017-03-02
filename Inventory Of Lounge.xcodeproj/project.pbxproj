@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C408F6851E67F0F7005E308E /* LoungeCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C408F6831E67F0F7005E308E /* LoungeCellView.xib */; };
-		C408F6861E67F0F7005E308E /* LoungeCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408F6841E67F0F7005E308E /* LoungeCellViewController.swift */; };
+		C408F6851E67F0F7005E308E /* LoungeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C408F6831E67F0F7005E308E /* LoungeHeaderView.xib */; };
+		C408F6861E67F0F7005E308E /* LoungeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408F6841E67F0F7005E308E /* LoungeHeaderView.swift */; };
 		C408F6891E67F128005E308E /* LoungeViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408F6871E67F128005E308E /* LoungeViewControllerTableViewController.swift */; };
 		C408F68A1E67F128005E308E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408F6881E67F128005E308E /* NavigationViewController.swift */; };
 		C408F68C1E67F97F005E308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C408F68B1E67F97F005E308E /* Assets.xcassets */; };
+		C408F68E1E68039A005E308E /* ValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408F68D1E68039A005E308E /* ValueTableViewCell.swift */; };
+		C408F6901E6803AA005E308E /* ValueTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C408F68F1E6803AA005E308E /* ValueTableViewCellView.xib */; };
 		C47B0F121E66B23400ACE2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F111E66B23400ACE2BD /* AppDelegate.swift */; };
 		C47B0F141E66B23400ACE2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F131E66B23400ACE2BD /* ViewController.swift */; };
 		C47B0F171E66B23400ACE2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B0F151E66B23400ACE2BD /* Main.storyboard */; };
@@ -39,11 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C408F6831E67F0F7005E308E /* LoungeCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoungeCellView.xib; sourceTree = "<group>"; };
-		C408F6841E67F0F7005E308E /* LoungeCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoungeCellViewController.swift; sourceTree = "<group>"; };
+		C408F6831E67F0F7005E308E /* LoungeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoungeHeaderView.xib; sourceTree = "<group>"; };
+		C408F6841E67F0F7005E308E /* LoungeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoungeHeaderView.swift; sourceTree = "<group>"; };
 		C408F6871E67F128005E308E /* LoungeViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoungeViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		C408F6881E67F128005E308E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		C408F68B1E67F97F005E308E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C408F68D1E68039A005E308E /* ValueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueTableViewCell.swift; sourceTree = "<group>"; };
+		C408F68F1E6803AA005E308E /* ValueTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueTableViewCellView.xib; sourceTree = "<group>"; };
 		C47B0F0E1E66B23400ACE2BD /* Inventory Of Lounge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory Of Lounge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47B0F111E66B23400ACE2BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C47B0F131E66B23400ACE2BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +91,10 @@
 		C408F6821E67F07F005E308E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C408F6831E67F0F7005E308E /* LoungeCellView.xib */,
-				C408F6841E67F0F7005E308E /* LoungeCellViewController.swift */,
+				C408F6831E67F0F7005E308E /* LoungeHeaderView.xib */,
+				C408F6841E67F0F7005E308E /* LoungeHeaderView.swift */,
+				C408F68F1E6803AA005E308E /* ValueTableViewCellView.xib */,
+				C408F68D1E68039A005E308E /* ValueTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -258,7 +264,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C408F6851E67F0F7005E308E /* LoungeCellView.xib in Resources */,
+				C408F6851E67F0F7005E308E /* LoungeHeaderView.xib in Resources */,
+				C408F6901E6803AA005E308E /* ValueTableViewCellView.xib in Resources */,
 				C47B0F1F1E66B23400ACE2BD /* LaunchScreen.storyboard in Resources */,
 				C408F68C1E67F97F005E308E /* Assets.xcassets in Resources */,
 				C47B0F171E66B23400ACE2BD /* Main.storyboard in Resources */,
@@ -289,9 +296,10 @@
 				C408F68A1E67F128005E308E /* NavigationViewController.swift in Sources */,
 				C47B0F141E66B23400ACE2BD /* ViewController.swift in Sources */,
 				C47B0F121E66B23400ACE2BD /* AppDelegate.swift in Sources */,
-				C408F6861E67F0F7005E308E /* LoungeCellViewController.swift in Sources */,
+				C408F6861E67F0F7005E308E /* LoungeHeaderView.swift in Sources */,
 				C47B0F1A1E66B23400ACE2BD /* Inventory_Of_Lounge.xcdatamodeld in Sources */,
 				C408F6891E67F128005E308E /* LoungeViewControllerTableViewController.swift in Sources */,
+				C408F68E1E68039A005E308E /* ValueTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

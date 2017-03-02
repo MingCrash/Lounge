@@ -122,6 +122,7 @@
                     <navigationItem key="navigationItem" id="eZa-Ng-2i8">
                         <barButtonItem key="backBarButtonItem" title="goback" id="Bhp-vK-OVs"/>
                     </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6d-Y2-uIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,6 +163,9 @@
                             <constraint firstItem="J3z-B7-2Pj" firstAttribute="top" secondItem="vrn-67-u2y" secondAttribute="bottom" id="uvj-9T-2vJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="vrn-67-u2y" id="Yet-Jh-P2Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3H9-OH-7Hp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,6 +175,7 @@
         <scene sceneID="HSC-y0-4Sm">
             <objects>
                 <navigationController id="Wp6-Ha-lYQ" customClass="NavigationViewController" customModule="Inventory_Of_Lounge" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KEG-hk-w4e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
