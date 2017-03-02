@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C408F6851E67F0F7005E308E /* LoungeCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C408F6831E67F0F7005E308E /* LoungeCellView.xib */; };
+		C408F6861E67F0F7005E308E /* LoungeCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408F6841E67F0F7005E308E /* LoungeCellViewController.swift */; };
+		C408F6891E67F128005E308E /* LoungeViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408F6871E67F128005E308E /* LoungeViewControllerTableViewController.swift */; };
+		C408F68A1E67F128005E308E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408F6881E67F128005E308E /* NavigationViewController.swift */; };
+		C408F68C1E67F97F005E308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C408F68B1E67F97F005E308E /* Assets.xcassets */; };
 		C47B0F121E66B23400ACE2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F111E66B23400ACE2BD /* AppDelegate.swift */; };
 		C47B0F141E66B23400ACE2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F131E66B23400ACE2BD /* ViewController.swift */; };
 		C47B0F171E66B23400ACE2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B0F151E66B23400ACE2BD /* Main.storyboard */; };
 		C47B0F1A1E66B23400ACE2BD /* Inventory_Of_Lounge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F181E66B23400ACE2BD /* Inventory_Of_Lounge.xcdatamodeld */; };
-		C47B0F1C1E66B23400ACE2BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C47B0F1B1E66B23400ACE2BD /* Assets.xcassets */; };
 		C47B0F1F1E66B23400ACE2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B0F1D1E66B23400ACE2BD /* LaunchScreen.storyboard */; };
 		C47B0F2A1E66B23400ACE2BD /* Inventory_Of_LoungeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F291E66B23400ACE2BD /* Inventory_Of_LoungeTests.swift */; };
 		C47B0F351E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F341E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift */; };
@@ -35,12 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C408F6831E67F0F7005E308E /* LoungeCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoungeCellView.xib; sourceTree = "<group>"; };
+		C408F6841E67F0F7005E308E /* LoungeCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoungeCellViewController.swift; sourceTree = "<group>"; };
+		C408F6871E67F128005E308E /* LoungeViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoungeViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		C408F6881E67F128005E308E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		C408F68B1E67F97F005E308E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C47B0F0E1E66B23400ACE2BD /* Inventory Of Lounge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory Of Lounge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47B0F111E66B23400ACE2BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C47B0F131E66B23400ACE2BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C47B0F161E66B23400ACE2BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C47B0F191E66B23400ACE2BD /* Inventory_Of_Lounge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Inventory_Of_Lounge.xcdatamodel; sourceTree = "<group>"; };
-		C47B0F1B1E66B23400ACE2BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C47B0F1E1E66B23400ACE2BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C47B0F201E66B23400ACE2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C47B0F251E66B23400ACE2BD /* Inventory Of LoungeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Inventory Of LoungeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C408F6821E67F07F005E308E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C408F6831E67F0F7005E308E /* LoungeCellView.xib */,
+				C408F6841E67F0F7005E308E /* LoungeCellViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C47B0F051E66B23400ACE2BD = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +116,13 @@
 		C47B0F101E66B23400ACE2BD /* Inventory Of Lounge */ = {
 			isa = PBXGroup;
 			children = (
+				C408F6821E67F07F005E308E /* Views */,
 				C47B0F111E66B23400ACE2BD /* AppDelegate.swift */,
 				C47B0F131E66B23400ACE2BD /* ViewController.swift */,
+				C408F6871E67F128005E308E /* LoungeViewControllerTableViewController.swift */,
+				C408F6881E67F128005E308E /* NavigationViewController.swift */,
+				C408F68B1E67F97F005E308E /* Assets.xcassets */,
 				C47B0F151E66B23400ACE2BD /* Main.storyboard */,
-				C47B0F1B1E66B23400ACE2BD /* Assets.xcassets */,
 				C47B0F1D1E66B23400ACE2BD /* LaunchScreen.storyboard */,
 				C47B0F201E66B23400ACE2BD /* Info.plist */,
 				C47B0F181E66B23400ACE2BD /* Inventory_Of_Lounge.xcdatamodeld */,
@@ -238,8 +258,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C408F6851E67F0F7005E308E /* LoungeCellView.xib in Resources */,
 				C47B0F1F1E66B23400ACE2BD /* LaunchScreen.storyboard in Resources */,
-				C47B0F1C1E66B23400ACE2BD /* Assets.xcassets in Resources */,
+				C408F68C1E67F97F005E308E /* Assets.xcassets in Resources */,
 				C47B0F171E66B23400ACE2BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,9 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C408F68A1E67F128005E308E /* NavigationViewController.swift in Sources */,
 				C47B0F141E66B23400ACE2BD /* ViewController.swift in Sources */,
 				C47B0F121E66B23400ACE2BD /* AppDelegate.swift in Sources */,
+				C408F6861E67F0F7005E308E /* LoungeCellViewController.swift in Sources */,
 				C47B0F1A1E66B23400ACE2BD /* Inventory_Of_Lounge.xcdatamodeld in Sources */,
+				C408F6891E67F128005E308E /* LoungeViewControllerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +542,7 @@
 				C47B0F3B1E66B23500ACE2BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C47B0F3C1E66B23500ACE2BD /* Build configuration list for PBXNativeTarget "Inventory Of LoungeTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +551,7 @@
 				C47B0F3E1E66B23500ACE2BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C47B0F3F1E66B23500ACE2BD /* Build configuration list for PBXNativeTarget "Inventory Of LoungeUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +560,7 @@
 				C47B0F411E66B23500ACE2BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
