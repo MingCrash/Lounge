@@ -11,6 +11,17 @@ import UIKit
 class LoungeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var lastSction: Int? = nil
+    var RoungeDictionary: NSMutableDictionary?
+    var ItemsArray: NSMutableArray?
+    var roungeArray: NSArray? = nil
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let dataPath = Bundle.main.path(forResource: "data", ofType: "plist")
+        RoungeDictionary = NSMutableDictionary(contentsOfFile: dataPath!)
+        roungeArray = RoungeDictionary?.allKeys as NSArray?
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +33,6 @@ class LoungeViewController: UIViewController {
         tableView.register(UINib(nibName: "LoungeHeaderView", bundle: Bundle.main), forHeaderFooterViewReuseIdentifier: "LoungeCellViewID")
         tableView.register(UINib(nibName: "ValueTableViewCellView", bundle: Bundle.main), forCellReuseIdentifier: "ValueTableViewCellViewID")
         automaticallyAdjustsScrollViewInsets = false
-        
-       // tableView.reloadData()
     }
     
     private func setupNavigationBar() {
@@ -49,24 +58,26 @@ extension LoungeViewController: UITableViewDelegate,UITableViewDataSource {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "LoungeCellViewID") as! LoungeHeaderView
         headerView.delegate = self
         headerView.section = section
-        headerView.LoungeLabel.text = "Lounge \(section)"
-        headerView.backgroundColor = UIColor.red
+        headerView.LoungeLabel.text = RoungeDictionary?.allKeys[section] as! String?
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60.0
+        return 70.0
     }
     
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return 0.01
-//    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55.0
+        return 50.0
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section+1
+        let name = roungeArray?.object(at: section) as! String
+        return (RoungeDictionary!.object(forKey: name) as! NSArray).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -75,14 +86,34 @@ extension LoungeViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func numberOfSections(in: UITableView) -> Int{
-        return 5
+        return (RoungeDictionary?.count)!
     }
-        
-    
 }
-//    func tableView(_ didSelectRowAttableView: UITableView, didSelectRowAt indexPath: IndexPath){
-//        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
-//        
-//    }
+
+extension LoungeViewController: LoungeHeaderViewDelegate{
+    func tapHeaderViewWith(section: Int){
+        if lastSction != nil {
+            
+            if section != lastSction {
+                let roungeName = roungeArray?.object(at: section)
+                let sourceArray = RoungeDictionary?.object(forKey: roungeName)
+                
+                
+            }
+            
+        }else{
+        
+        }
+
+    }
+    
+    func deleteHeaderViewWith(section :Int){
+    
+    }
+    
+    func outletInfoWith(section: Int){
+        
+    }
+}
 
 

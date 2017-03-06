@@ -18,20 +18,42 @@ import UIKit
     
 }
 
-
 class LoungeHeaderView: UITableViewHeaderFooterView{
     var delegate: AnyObject?
-    var section: Int?
+    var section: Int?          //the section of header
     
     @IBOutlet var LoungeLabel: UILabel!
     
-    @IBAction func deleteLounge(_ sender: Any) {
-//        if self.delegate != nil && (self.delegate?.response(LoungeHeaderViewDelegate.outletInfoWith(section as! LoungeHeaderViewDelegate))) {
-//            self.delegate?.outletInfoWith(section: section!)
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.contentView.backgroundColor = UIColor(colorLiteralRed: 40/255.0, green: 102/255.0, blue: 101/255.0, alpha: 1.0)
+        
+        self.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapSelf))
+        self.addGestureRecognizer(tap)
+    }
+    
+    @objc func tapSelf() {
+        if (self.delegate != nil) && (self.delegate?.responds(to: #selector(LoungeHeaderViewDelegate.tapHeaderViewWith(section:))))! {
+            self.delegate?.tapHeaderViewWith(section: self.section!)
         }
     }
-  
     
+    @IBAction func showDetail(_ sender: Any) {
+        if self.delegate != nil && (self.delegate?.responds(to: #selector(LoungeHeaderViewDelegate.outletInfoWith(section:))))! {
+            //传送section给hander方法
+            self.delegate?.outletInfoWith(section: section!)
+        }
+    }
+    
+    @IBAction func deleteLounge(_ sender: Any) {
+        if self.delegate != nil && (self.delegate?.responds(to: #selector(LoungeHeaderViewDelegate.deleteHeaderViewWith(section:))))! {
+            
+        }
+    }
+}
+  
+
     
     
     

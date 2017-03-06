@@ -21,6 +21,7 @@
 		C47B0F1F1E66B23400ACE2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B0F1D1E66B23400ACE2BD /* LaunchScreen.storyboard */; };
 		C47B0F2A1E66B23400ACE2BD /* Inventory_Of_LoungeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F291E66B23400ACE2BD /* Inventory_Of_LoungeTests.swift */; };
 		C47B0F351E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F341E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift */; };
+		C4ADFC6E1E697021005D8712 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4ADFC6D1E697021005D8712 /* data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C47B0F301E66B23500ACE2BD /* Inventory Of LoungeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Inventory Of LoungeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47B0F341E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory_Of_LoungeUITests.swift; sourceTree = "<group>"; };
 		C47B0F361E66B23500ACE2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4ADFC6D1E697021005D8712 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		C47B0F101E66B23400ACE2BD /* Inventory Of Lounge */ = {
 			isa = PBXGroup;
 			children = (
+				C4ADFC6C1E696FDA005D8712 /* Data */,
 				C408F6821E67F07F005E308E /* Views */,
 				C47B0F111E66B23400ACE2BD /* AppDelegate.swift */,
 				C47B0F131E66B23400ACE2BD /* ViewController.swift */,
@@ -152,6 +155,14 @@
 				C47B0F361E66B23500ACE2BD /* Info.plist */,
 			);
 			path = "Inventory Of LoungeUITests";
+			sourceTree = "<group>";
+		};
+		C4ADFC6C1E696FDA005D8712 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C4ADFC6D1E697021005D8712 /* data.plist */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4ADFC6E1E697021005D8712 /* data.plist in Resources */,
 				C408F6851E67F0F7005E308E /* LoungeHeaderView.xib in Resources */,
 				C408F6901E6803AA005E308E /* ValueTableViewCellView.xib in Resources */,
 				C47B0F1F1E66B23400ACE2BD /* LaunchScreen.storyboard in Resources */,
