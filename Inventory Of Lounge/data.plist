@@ -10,6 +10,7 @@
 			<key>description</key>
 			<string></string>
 		</dict>
+		<string></string>
 		<dict>
 			<key>amount</key>
 			<string></string>
@@ -35,8 +36,6 @@
 	</array>
 	<key>尔雅堂</key>
 	<array>
-		<string></string>
-		<string></string>
 		<dict>
 			<key>amount</key>
 			<string></string>
@@ -53,8 +52,6 @@
 	<key>逸连堂</key>
 	<array>
 		<string></string>
-		<string></string>
-		<string></string>
 		<dict>
 			<key>amount</key>
 			<string></string>
@@ -70,8 +67,6 @@
 	</array>
 	<key>寰宇堂 Business</key>
 	<array>
-		<string></string>
-		<string></string>
 		<string></string>
 		<string></string>
 		<dict>
@@ -92,8 +87,6 @@
 		<string></string>
 		<string></string>
 		<string></string>
-		<string></string>
-		<string></string>
 		<dict>
 			<key>amount</key>
 			<string></string>
@@ -109,8 +102,6 @@
 	</array>
 	<key>寰宇堂 First</key>
 	<array>
-		<string></string>
-		<string></string>
 		<string></string>
 		<string></string>
 		<string></string>

@@ -171,7 +171,7 @@
         <!--Lounge View Controller-->
         <scene sceneID="inJ-Rz-r1m">
             <objects>
-                <viewController id="aCV-Dj-Udj" customClass="LoungeViewController" customModule="Inventory_Of_Lounge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="aCV-Dj-Udj" customClass="LoungeViewController" customModule="Inventory_Of_Lounge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i9c-vz-tET"/>
                         <viewControllerLayoutGuide type="bottom" id="J3z-B7-2Pj"/>
@@ -188,7 +188,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="2"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pMC-av-8J6" id="Fdc-YA-3U2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1.6666666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

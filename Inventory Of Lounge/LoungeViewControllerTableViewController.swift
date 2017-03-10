@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LoungeViewController: UIViewController {
 
@@ -24,11 +25,30 @@ class LoungeViewController: UIViewController {
         RoungeDictionary = NSMutableDictionary(contentsOfFile: dataPath!)
         roungeArray = RoungeDictionary?.allKeys as NSArray?
         
-        //获取一个具有结构的而且空白的结构
+        //获取一个具有结构的而且空白的数组结构currentItemsArray
         for _ in RoungeDictionary! {
             let element: NSMutableArray = NSMutableArray()
             currentItemsArray?.add(element)
         }
+        
+////////////////////////////////////////////////////////////////////////////////////
+        
+        //datamodel.xcdatamodeld经过编译打包到APP里面后会变成datamodel.momd格式的文件，真正要读取的是.momd格式的文件
+        guard let url = Bundle.main.url(forResource: "CoreData", withExtension: "momd") else {
+            fatalError("fatalError: the CoreData could not be loaded")
+        }
+        //获取coredata的ManagedObjectModel数据模型
+        guard let mom = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("fatalError: the CoreDataModel could not be created from \(url)")
+        }
+        //创建coredata的持久化存储助手
+        guard let psc = NSPersistentStoreCoordinator.init(managedObjectModel: mom) else {
+            fatalError("fatalError: the PersistentStoreCoordinator could not be created successfuly")
+        }
+        //创建上下文Context
+        let moc = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
+        moc.persistentStoreCoordinator = psc
+        
     }
     
     override func viewDidLoad() {
@@ -78,7 +98,7 @@ extension LoungeViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.1
+        return 0.5
     }
     
     //控制cell的行数
@@ -111,7 +131,7 @@ extension LoungeViewController: LoungeHeaderViewDelegate{
             var indexSet = IndexSet()
             indexSet.insert(section)
             indexSet.insert(lastSction!)
-            tableView.reloadSections(indexSet, with: .automatic)
+            tableView.reloadSections(indexSet, with: .left)
   
             lastSction = section
         }else{
@@ -123,14 +143,13 @@ extension LoungeViewController: LoungeHeaderViewDelegate{
             }else{
                 currentItemsArray?.replaceObject(at: section, with: tmpItemsArray as Any)
             }
-            
-            tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+            tableView.reloadSections(IndexSet(integer: section), with: .left)
         }
   
     }
     
     func deleteHeaderViewWith(section :Int){
-    
+        
     }
     
     func outletInfoWith(section: Int){
