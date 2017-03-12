@@ -14,41 +14,58 @@ class LoungeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var lastSction: Int? = 0
-    var RoungeDictionary: NSMutableDictionary? = nil
-    //被展开的items的数据组，直接唯一地控制整个tableView显示的对应结构体
-    var currentItemsArray: NSMutableArray? = NSMutableArray()
-    var roungeArray: NSArray? = nil
+    var loungeResult: [NSManagedObject]? = nil
+    var itemsResult: [NSManagedObject]? = nil
+    
+    var currentItemsArray: [Int]? = nil
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let dataPath = Bundle.main.path(forResource: "data", ofType: "plist")
-        RoungeDictionary = NSMutableDictionary(contentsOfFile: dataPath!)
-        roungeArray = RoungeDictionary?.allKeys as NSArray?
         
-        //获取一个具有结构的而且空白的数组结构currentItemsArray
-        for _ in RoungeDictionary! {
-            let element: NSMutableArray = NSMutableArray()
-            currentItemsArray?.add(element)
+        guard insertBaseInfo(context: getContext()) else {
+            fatalError("insert Base Info fail!!")
         }
+        guard fetch(context: getContext()) else {
+            fatalError("fetch data fail!!")
+        }
+        currentItemsArray = [Int](repeating: 0, count: (loungeResult?.count)!)
+    }
+    
+    func insertBaseInfo(context: NSManagedObjectContext) -> Bool {
+        let loungeArray = ["The Cabin","The Arrival","The Bridge","The Wing Frist","The Wing Business","The Peri First","The Peri Business"]
         
-////////////////////////////////////////////////////////////////////////////////////
+        var index: Int? = 0
+        for loungeName in loungeArray {
+            let lounges = NSEntityDescription.insertNewObject(forEntityName: "Lounges", into: context)
+            lounges.setValue(index, forKey: "loungeID")
+            lounges.setValue(loungeName, forKey: "loungeName")
+            lounges.setValue(index!+1, forKey: "itemsAmount")
+            index = index! + 1
+            
+            do {
+                try context.save()
+            } catch  {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func fetch(context: NSManagedObjectContext) -> Bool {
+        let fetchLounges = NSFetchRequest<NSFetchRequestResult>(entityName: "Lounges")
+        let fetchItems = NSFetchRequest<NSFetchRequestResult>(entityName: "Items")
         
-        //datamodel.xcdatamodeld经过编译打包到APP里面后会变成datamodel.momd格式的文件，真正要读取的是.momd格式的文件
-        guard let url = Bundle.main.url(forResource: "CoreData", withExtension: "momd") else {
-            fatalError("fatalError: the CoreData could not be loaded")
+        do {
+            loungeResult = try context.fetch(fetchLounges) as? [NSManagedObject]
+            itemsResult = try context.fetch(fetchItems) as? [NSManagedObject]
+        } catch  {
+            fatalError("load fail!!")
         }
-        //获取coredata的ManagedObjectModel数据模型
-        guard let mom = NSManagedObjectModel(contentsOf: url) else {
-            fatalError("fatalError: the CoreDataModel could not be created from \(url)")
-        }
-        //创建coredata的持久化存储助手
-        guard let psc = NSPersistentStoreCoordinator.init(managedObjectModel: mom) else {
-            fatalError("fatalError: the PersistentStoreCoordinator could not be created successfuly")
-        }
-        //创建上下文Context
-        let moc = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
-        moc.persistentStoreCoordinator = psc
-        
+        return true
+    }
+    
+    func getContext() -> NSManagedObjectContext {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     
     override func viewDidLoad() {
@@ -85,7 +102,7 @@ extension LoungeViewController: UITableViewDelegate,UITableViewDataSource {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "LoungeCellViewID") as! LoungeHeaderView
         headerView.delegate = self
         headerView.section = section
-        headerView.LoungeLabel.text = roungeArray?.object(at: section) as? String
+        headerView.LoungeLabel.text = loungeResult?[section].value(forKey: "loungeName") as? String
         return headerView
     }
     
@@ -103,7 +120,7 @@ extension LoungeViewController: UITableViewDelegate,UITableViewDataSource {
     
     //控制cell的行数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (currentItemsArray?.object(at: section) as! NSMutableArray).count
+        return (currentItemsArray?[section])! as Int
     }
     
     //给cell安装cellView
@@ -113,20 +130,22 @@ extension LoungeViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func numberOfSections(in: UITableView) -> Int{
-        return (roungeArray?.count)!
+        return (loungeResult?.count)!
     }
 }
 
 extension LoungeViewController: LoungeHeaderViewDelegate{
     func tapHeaderViewWith(section: Int){
-        //拿到休息室名
-        let name = roungeArray?.object(at: section) as! String
-        //休息室所对应的items
-        let tmpItemsArray = RoungeDictionary!.object(forKey: name) as! NSMutableArray?
+//        //拿到休息室名
+//        let name = roungeArray?.object(at: section) as! String
+//        //休息室所对应的items
+//        let tmpItemsArray = RoungeDictionary!.object(forKey: name) as! NSMutableArray?
+        let amount = loungeResult?[section].value(forKey: "itemsAmount") as! Int
+        
         
         if section != lastSction {
-            currentItemsArray?.replaceObject(at: section, with: tmpItemsArray as Any)
-            currentItemsArray?.replaceObject(at: lastSction!, with: NSMutableArray())
+            currentItemsArray?[section] = amount
+            currentItemsArray?[lastSction!] = 0
             
             var indexSet = IndexSet()
             indexSet.insert(section)
@@ -136,12 +155,12 @@ extension LoungeViewController: LoungeHeaderViewDelegate{
             lastSction = section
         }else{
             //当前点击的section与之前的一致时候，
-            let countOfItems = (currentItemsArray?.object(at: section) as! NSMutableArray).count
+            let countOfItems = (currentItemsArray?[section])! as Int
             
             if countOfItems != 0 {
-                currentItemsArray?.replaceObject(at: section, with: NSMutableArray())
+                currentItemsArray?[section] = 0
             }else{
-                currentItemsArray?.replaceObject(at: section, with: tmpItemsArray as Any)
+                currentItemsArray?[section] = amount
             }
             tableView.reloadSections(IndexSet(integer: section), with: .left)
         }

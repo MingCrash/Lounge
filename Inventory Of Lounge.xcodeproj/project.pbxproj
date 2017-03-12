@@ -14,7 +14,6 @@
 		C408F68C1E67F97F005E308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C408F68B1E67F97F005E308E /* Assets.xcassets */; };
 		C408F68E1E68039A005E308E /* ValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408F68D1E68039A005E308E /* ValueTableViewCell.swift */; };
 		C408F6901E6803AA005E308E /* ValueTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C408F68F1E6803AA005E308E /* ValueTableViewCellView.xib */; };
-		C42C1E051E6FBAD5005DC97F /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C42C1E031E6FBAD5005DC97F /* CoreData.xcdatamodeld */; };
 		C47B0F121E66B23400ACE2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F111E66B23400ACE2BD /* AppDelegate.swift */; };
 		C47B0F141E66B23400ACE2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F131E66B23400ACE2BD /* ViewController.swift */; };
 		C47B0F171E66B23400ACE2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B0F151E66B23400ACE2BD /* Main.storyboard */; };
@@ -22,6 +21,7 @@
 		C47B0F2A1E66B23400ACE2BD /* Inventory_Of_LoungeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F291E66B23400ACE2BD /* Inventory_Of_LoungeTests.swift */; };
 		C47B0F351E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F341E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift */; };
 		C4ADFC6E1E697021005D8712 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4ADFC6D1E697021005D8712 /* data.plist */; };
+		C4CB51CB1E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4CB51C91E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		C408F68B1E67F97F005E308E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C408F68D1E68039A005E308E /* ValueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueTableViewCell.swift; sourceTree = "<group>"; };
 		C408F68F1E6803AA005E308E /* ValueTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueTableViewCellView.xib; sourceTree = "<group>"; };
-		C42C1E041E6FBAD5005DC97F /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		C47B0F0E1E66B23400ACE2BD /* Inventory Of Lounge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory Of Lounge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47B0F111E66B23400ACE2BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C47B0F131E66B23400ACE2BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		C47B0F341E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory_Of_LoungeUITests.swift; sourceTree = "<group>"; };
 		C47B0F361E66B23500ACE2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4ADFC6D1E697021005D8712 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		C4CB51CA1E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Inventory_Of_Lounge.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				C4ADFC6D1E697021005D8712 /* data.plist */,
-				C42C1E031E6FBAD5005DC97F /* CoreData.xcdatamodeld */,
+				C4CB51C91E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -309,9 +309,9 @@
 				C47B0F141E66B23400ACE2BD /* ViewController.swift in Sources */,
 				C47B0F121E66B23400ACE2BD /* AppDelegate.swift in Sources */,
 				C408F6861E67F0F7005E308E /* LoungeHeaderView.swift in Sources */,
+				C4CB51CB1E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld in Sources */,
 				C408F6891E67F128005E308E /* LoungeViewControllerTableViewController.swift in Sources */,
 				C408F68E1E68039A005E308E /* ValueTableViewCell.swift in Sources */,
-				C42C1E051E6FBAD5005DC97F /* CoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,13 +585,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C42C1E031E6FBAD5005DC97F /* CoreData.xcdatamodeld */ = {
+		C4CB51C91E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C42C1E041E6FBAD5005DC97F /* CoreData.xcdatamodel */,
+				C4CB51CA1E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodel */,
 			);
-			currentVersion = C42C1E041E6FBAD5005DC97F /* CoreData.xcdatamodel */;
-			path = CoreData.xcdatamodeld;
+			currentVersion = C4CB51CA1E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodel */;
+			path = Inventory_Of_Lounge.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
