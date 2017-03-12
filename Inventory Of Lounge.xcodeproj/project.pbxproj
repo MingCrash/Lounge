@@ -20,7 +20,6 @@
 		C47B0F1F1E66B23400ACE2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B0F1D1E66B23400ACE2BD /* LaunchScreen.storyboard */; };
 		C47B0F2A1E66B23400ACE2BD /* Inventory_Of_LoungeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F291E66B23400ACE2BD /* Inventory_Of_LoungeTests.swift */; };
 		C47B0F351E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F341E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift */; };
-		C4ADFC6E1E697021005D8712 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4ADFC6D1E697021005D8712 /* data.plist */; };
 		C4CB51CB1E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4CB51C91E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 		C47B0F301E66B23500ACE2BD /* Inventory Of LoungeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Inventory Of LoungeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47B0F341E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory_Of_LoungeUITests.swift; sourceTree = "<group>"; };
 		C47B0F361E66B23500ACE2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4ADFC6D1E697021005D8712 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		C4CB51CA1E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Inventory_Of_Lounge.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,7 +157,6 @@
 		C4ADFC6C1E696FDA005D8712 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				C4ADFC6D1E697021005D8712 /* data.plist */,
 				C4CB51C91E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld */,
 			);
 			name = Data;
@@ -275,7 +272,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4ADFC6E1E697021005D8712 /* data.plist in Resources */,
 				C408F6851E67F0F7005E308E /* LoungeHeaderView.xib in Resources */,
 				C408F6901E6803AA005E308E /* ValueTableViewCellView.xib in Resources */,
 				C47B0F1F1E66B23400ACE2BD /* LaunchScreen.storyboard in Resources */,
