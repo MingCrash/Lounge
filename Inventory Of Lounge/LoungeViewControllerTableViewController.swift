@@ -87,7 +87,10 @@ class LoungeViewController: UIViewController {
     }
     
     @objc func addTabbed() {
+        let addLoungeVC = AddLoungeViewController()
         
+        print("fuck!")
+        self.present(addLoungeVC, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -136,12 +139,7 @@ extension LoungeViewController: UITableViewDelegate,UITableViewDataSource {
 
 extension LoungeViewController: LoungeHeaderViewDelegate{
     func tapHeaderViewWith(section: Int){
-//        //拿到休息室名
-//        let name = roungeArray?.object(at: section) as! String
-//        //休息室所对应的items
-//        let tmpItemsArray = RoungeDictionary!.object(forKey: name) as! NSMutableArray?
         let amount = loungeResult?[section].value(forKey: "itemsAmount") as! Int
-        
         
         if section != lastSction {
             currentItemsArray?[section] = amount
