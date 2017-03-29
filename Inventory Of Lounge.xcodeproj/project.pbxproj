@@ -14,14 +14,17 @@
 		C408F68C1E67F97F005E308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C408F68B1E67F97F005E308E /* Assets.xcassets */; };
 		C408F68E1E68039A005E308E /* ValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408F68D1E68039A005E308E /* ValueTableViewCell.swift */; };
 		C408F6901E6803AA005E308E /* ValueTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C408F68F1E6803AA005E308E /* ValueTableViewCellView.xib */; };
+		C45217231E7FCC9D00814925 /* AddLoungeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45217211E7FCC9D00814925 /* AddLoungeViewController.swift */; };
+		C45217241E7FCC9D00814925 /* AddLoungeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45217221E7FCC9D00814925 /* AddLoungeViewController.xib */; };
+		C45217271E80F60900814925 /* ResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45217261E80F60900814925 /* ResponderExtension.swift */; };
+		C45217291E81427D00814925 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45217281E81427D00814925 /* CoreDataController.swift */; };
 		C47B0F121E66B23400ACE2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F111E66B23400ACE2BD /* AppDelegate.swift */; };
-		C47B0F141E66B23400ACE2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F131E66B23400ACE2BD /* ViewController.swift */; };
+		C47B0F141E66B23400ACE2BD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F131E66B23400ACE2BD /* RootViewController.swift */; };
 		C47B0F171E66B23400ACE2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B0F151E66B23400ACE2BD /* Main.storyboard */; };
 		C47B0F1F1E66B23400ACE2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47B0F1D1E66B23400ACE2BD /* LaunchScreen.storyboard */; };
 		C47B0F2A1E66B23400ACE2BD /* Inventory_Of_LoungeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F291E66B23400ACE2BD /* Inventory_Of_LoungeTests.swift */; };
 		C47B0F351E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B0F341E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift */; };
 		C4CB51CB1E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4CB51C91E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld */; };
-		C4CB51DF1E768C7F002852B9 /* AddLoungeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CB51DE1E768C7F002852B9 /* AddLoungeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +52,13 @@
 		C408F68B1E67F97F005E308E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C408F68D1E68039A005E308E /* ValueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueTableViewCell.swift; sourceTree = "<group>"; };
 		C408F68F1E6803AA005E308E /* ValueTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueTableViewCellView.xib; sourceTree = "<group>"; };
+		C45217211E7FCC9D00814925 /* AddLoungeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoungeViewController.swift; sourceTree = "<group>"; };
+		C45217221E7FCC9D00814925 /* AddLoungeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLoungeViewController.xib; sourceTree = "<group>"; };
+		C45217261E80F60900814925 /* ResponderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponderExtension.swift; sourceTree = "<group>"; };
+		C45217281E81427D00814925 /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		C47B0F0E1E66B23400ACE2BD /* Inventory Of Lounge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory Of Lounge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47B0F111E66B23400ACE2BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C47B0F131E66B23400ACE2BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C47B0F131E66B23400ACE2BD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C47B0F161E66B23400ACE2BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C47B0F1E1E66B23400ACE2BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C47B0F201E66B23400ACE2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +69,6 @@
 		C47B0F341E66B23500ACE2BD /* Inventory_Of_LoungeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory_Of_LoungeUITests.swift; sourceTree = "<group>"; };
 		C47B0F361E66B23500ACE2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4CB51CA1E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Inventory_Of_Lounge.xcdatamodel; sourceTree = "<group>"; };
-		C4CB51DE1E768C7F002852B9 /* AddLoungeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLoungeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,19 @@
 				C408F6841E67F0F7005E308E /* LoungeHeaderView.swift */,
 				C408F68F1E6803AA005E308E /* ValueTableViewCellView.xib */,
 				C408F68D1E68039A005E308E /* ValueTableViewCell.swift */,
-				C4CB51DE1E768C7F002852B9 /* AddLoungeViewController.swift */,
+				C45217211E7FCC9D00814925 /* AddLoungeViewController.swift */,
+				C45217221E7FCC9D00814925 /* AddLoungeViewController.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C45217251E80F5B200814925 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C45217261E80F60900814925 /* ResponderExtension.swift */,
+				C45217281E81427D00814925 /* CoreDataController.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		C47B0F051E66B23400ACE2BD = {
@@ -125,10 +141,11 @@
 		C47B0F101E66B23400ACE2BD /* Inventory Of Lounge */ = {
 			isa = PBXGroup;
 			children = (
+				C45217251E80F5B200814925 /* Helper */,
 				C4ADFC6C1E696FDA005D8712 /* Data */,
 				C408F6821E67F07F005E308E /* Views */,
 				C47B0F111E66B23400ACE2BD /* AppDelegate.swift */,
-				C47B0F131E66B23400ACE2BD /* ViewController.swift */,
+				C47B0F131E66B23400ACE2BD /* RootViewController.swift */,
 				C408F6871E67F128005E308E /* LoungeViewControllerTableViewController.swift */,
 				C408F6881E67F128005E308E /* NavigationViewController.swift */,
 				C408F68B1E67F97F005E308E /* Assets.xcassets */,
@@ -277,6 +294,7 @@
 			files = (
 				C408F6851E67F0F7005E308E /* LoungeHeaderView.xib in Resources */,
 				C408F6901E6803AA005E308E /* ValueTableViewCellView.xib in Resources */,
+				C45217241E7FCC9D00814925 /* AddLoungeViewController.xib in Resources */,
 				C47B0F1F1E66B23400ACE2BD /* LaunchScreen.storyboard in Resources */,
 				C408F68C1E67F97F005E308E /* Assets.xcassets in Resources */,
 				C47B0F171E66B23400ACE2BD /* Main.storyboard in Resources */,
@@ -305,12 +323,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C408F68A1E67F128005E308E /* NavigationViewController.swift in Sources */,
-				C47B0F141E66B23400ACE2BD /* ViewController.swift in Sources */,
-				C4CB51DF1E768C7F002852B9 /* AddLoungeViewController.swift in Sources */,
+				C47B0F141E66B23400ACE2BD /* RootViewController.swift in Sources */,
+				C45217291E81427D00814925 /* CoreDataController.swift in Sources */,
 				C47B0F121E66B23400ACE2BD /* AppDelegate.swift in Sources */,
 				C408F6861E67F0F7005E308E /* LoungeHeaderView.swift in Sources */,
 				C4CB51CB1E758BD5002852B9 /* Inventory_Of_Lounge.xcdatamodeld in Sources */,
 				C408F6891E67F128005E308E /* LoungeViewControllerTableViewController.swift in Sources */,
+				C45217231E7FCC9D00814925 /* AddLoungeViewController.swift in Sources */,
+				C45217271E80F60900814925 /* ResponderExtension.swift in Sources */,
 				C408F68E1E68039A005E308E /* ValueTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

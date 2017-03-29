@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CoreData
 @testable import Inventory_Of_Lounge
 
 class Inventory_Of_LoungeTests: XCTestCase {
@@ -19,6 +20,53 @@ class Inventory_Of_LoungeTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testCoredatacontroller() {
+        let entityDescription = NSEntityDescription.entity(forEntityName: EntityName.lounge.rawValue, in: CoreDataController.getContext())
+        let lounge = Lounges(entity: entityDescription!, insertInto: CoreDataController.getContext())
+        
+        let items = Items(entity: NSEntityDescription.entity(forEntityName: EntityName.items.rawValue, in: CoreDataController.getContext())!, insertInto: CoreDataController.getContext())
+        items.aisaFood = 10
+        items.magazine = 20
+        items.wine = 30
+        
+        lounge.loungeName = "zhuzhiming"
+        lounge.address = "First Floor"
+        lounge.contactNumber = "1369741574"
+        lounge.item = items
+        
+        XCTAssertTrue(CoreDataController.save(with: CoreDataController.getContext()))
+        
+        let result: [NSManagedObject] = CoreDataController.fetch(with: CoreDataController.getContext(), with: nil)
+        
+        print(result)
+    }
+    
+    func testmodify() {
+        let context = CoreDataController.getContext()
+        let me = Lounges(entity: NSEntityDescription.entity(forEntityName: EntityName.lounge.rawValue, in: context)!, insertInto: context)
+        
+        me.loungeName = "zhuzhiming"
+        me.address = "Second Flood"
+        me.contactNumber = "123455675"
+        
+        XCTAssertTrue(CoreDataController.modify(with: context, modifyEntity: me, predicate: nil))
+        
+        let result: [NSManagedObject] = CoreDataController.fetch(with: CoreDataController.getContext(), with: nil)
+        print(result)
+    }
+    
+    func testdelete() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: EntityName.lounge.rawValue)
+        let context = CoreDataController.getContext()
+        var entity: [Lounges]? = nil
+        do {
+            entity = try context.fetch(request) as? [Lounges]
+        } catch  {
+            print(false)
+        }
+        let _ = CoreDataController.delete(with: context, with: (entity?.first?.objectID)!)
     }
     
     func testExample() {
